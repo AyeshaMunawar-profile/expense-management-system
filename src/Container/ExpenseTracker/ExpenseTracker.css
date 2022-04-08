@@ -1,3 +1,6 @@
 .expense-tracker{
-    padding: 10rem 1rem;
+    padding: 20rem 1rem;
+}
+.expense-tracker__heading{
+    margin-bottom: 8rem;
 }
