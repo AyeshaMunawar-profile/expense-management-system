@@ -1,8 +1,10 @@
 import React from 'react';
-
+import "./ExpenseItem.css"
 function ExpenseItem(props) {
     return (
-        <div></div>
+        <div className="expense-item">
+            <h1>Expense Item</h1>
+        </div>
     );
 }
 

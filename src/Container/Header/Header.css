@@ -9,14 +9,16 @@
 }
 
 .header-background {
+    outline: 1rem solid #e2a4a5;
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
     background-size: cover;
     background: url("../../res/headerx2000.png") no-repeat center;
     filter: blur(6px);
+    overflow: hidden;
+    background-clip: padding-box;
 }
 
 .header-content {

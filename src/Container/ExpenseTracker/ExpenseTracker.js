@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "./ExpenseTracker.css"
 function ExpenseTracker(props) {
     return (
         <div id="expense-tracker">
