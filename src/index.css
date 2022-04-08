@@ -14,6 +14,8 @@
     --color-black-0: #101415;
     --color-white-0: #F8F9FA;
     --color-white-1: #E9ECEF;
+    --box-shadow-default: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+    0 9px 28px 8px rgba(0, 0, 0, 0.05);
     /*Define the base font size 1rem = 10px */
     font-size: 62.5%;
 }
@@ -39,7 +41,7 @@ code {
     monospace;
 }
 
-.heading, h1, h2, h3 {
+.heading, h1 {
     font-family: 'Source Serif Pro', serif;
     font-weight: 400;
     letter-spacing: 1px;
@@ -55,11 +57,11 @@ h1 {
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 3.2rem;
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: 2.4rem;
 }
 
 h4 {
@@ -83,8 +85,11 @@ p {
     margin-bottom: 1.6rem;
 }
 
-.paragraph {
+.paragraph, h2, h3, h4, h5, h6 , p {
     font-family: 'Oxygen', sans-serif;
+}
+.text-thin {
+    font-weight: lighter;
 }
 
 .text-regular {

@@ -14,6 +14,7 @@
     top: 0;
     bottom: 0;
     width: 100%;
+    height: auto;
     background-size: cover;
     background: url("../../res/headerx2000.png") no-repeat center;
     filter: blur(6px);

@@ -3,7 +3,7 @@ import "./Header.css"
 
 function Header(props) {
     const moveToExpenseTrackingArea = () => {
-        const trackingArea = document.getElementById("expense-tracker");
+        const trackingArea = document.getElementById("expense-tracking-area");
         trackingArea.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"})
     }
     return (
