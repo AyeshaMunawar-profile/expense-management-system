@@ -1,0 +1,46 @@
+.header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background: url("../../res/headerx2000.png") no-repeat center;
+    filter: blur(6px);
+}
+
+.header-content {
+    filter: blur(0px);
+}
+
+.header-btn,
+.header-btn:link,
+.header-btn:visited {
+    transform: rotate(90deg);
+    background: none;
+    border: none;
+    font-size: 10rem;
+    color: var(--color-blue-0);
+    transition: all .3s ease-in-out;
+}
+
+.header-btn:hover {
+    transform: rotate(90deg) scale(1.05);
+    color: var(--color-blue-0);
+}
+
+.header-btn:active,
+.header-btn:focus {
+    transform: rotate(90deg) scale(1);
+    color: var(--color-pink-0);
+}
