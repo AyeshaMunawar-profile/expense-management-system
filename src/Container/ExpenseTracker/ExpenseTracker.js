@@ -7,7 +7,7 @@ function ExpenseTracker(props) {
     let expenseListComponent = []
     const getExpenseListComponent = () => {
         expensesList.forEach(expense => {
-            expenseListComponent.push(<ExpenseItem {...expense}/>)
+            expenseListComponent.push(<ExpenseItem {...expense} key={expense.id}/>)
         })
         return expenseListComponent;
     }
