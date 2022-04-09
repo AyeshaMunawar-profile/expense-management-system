@@ -36,18 +36,6 @@
     color: var(--color-white-0);
 }
 
-.expense-date {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    color: var(--color-white-0);
-    padding: 1rem;
-    border: 2px solid var(--color-grey--1);
-    border-radius: 1rem;
-}
-
 .expense-item__price {
     min-width: 20rem;
     background-color: var(--color-pink-0);
@@ -55,6 +43,7 @@
     padding: 0.5rem;
     border-radius: 12px;
     align-self: stretch;
+    justify-self: center;
     justify-self: center;
     display: flex;
     flex-flow: column nowrap;
@@ -70,6 +59,11 @@
 }
 
 @media (max-width: 580px) {
+    .expense-item{
+        flex-flow: column nowrap;
+        align-items: center;
+        padding: 4rem 0;
+    }
     .expense-item__description {
         flex-direction: column;
         flex-wrap: nowrap;
