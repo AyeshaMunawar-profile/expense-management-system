@@ -2,9 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    box-shadow: 5px 8px 24px 5px rgba(208, 216, 243, 0.6);
     padding: 0.5rem;
-    margin: 1rem 0;
+    margin: 5rem 0;
     border-radius: 12px;
     background-color: var(--color-blue-0);
 }

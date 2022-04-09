@@ -1,10 +1,17 @@
 #Expense Management System
-It is a basic app created in react.js that allows you to add your expenses per month and visualize it though user-friendly graphs 
+It is a basic app created in react.js that allows you to add your expenses per month and visualize it though user-friendly graphs
+
 ## Technologies used 
 1) React.js
 2) CSS
+
 ##Features
-1) Add expense in dollars using forms
+1) Add expenses by filling a form
+2) Display the list of all the expenses
+3) Allow user to search by expense name
+4) Allow user to see expenses for each year and month separately and show it in the form of progress bar 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
