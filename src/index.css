@@ -40,8 +40,13 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-.heading, h1 {
+.heading{
+    font-family: 'Source Serif Pro', serif !important;
+    font-weight: 400;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+h1 {
     font-family: 'Source Serif Pro', serif;
     font-weight: 400;
     letter-spacing: 1px;
