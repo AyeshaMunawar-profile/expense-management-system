@@ -1,18 +1,16 @@
 import React from 'react';
 import "./ExpenseItem.css"
+import DateBox from "../DateBox/DateBox";
 
 function ExpenseItem(props) {
-    const date = new Date(2021, 2, 1);
-    const expenseTitle = "Car Expense";
-    const amount = 124.352;
+    const {date, expenseTitle, amount} = props;
+
     return (
         <div className="expense-item">
-            <div className="expense-date">
-                <h2 className="date-text">{date.toISOString()}</h2>
-            </div>
+            <DateBox date={date}/>
             <div className="expense-item__description">
-                <h2 className="expense-item__title">{expenseTitle}</h2>
-                <h3 className="paragraph expense-item__price">{`$ ${amount}`}</h3>
+                <div className="expense-item__title"><h3 className="heading">{expenseTitle}</h3></div>
+                <div className="paragraph expense-item__price"><h3>{`$ ${amount.toLocaleString()}`}</h3></div>
             </div>
         </div>
     );

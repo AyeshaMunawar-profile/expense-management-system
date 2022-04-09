@@ -1,7 +1,7 @@
 .expense-item {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     box-shadow: 5px 8px 24px 5px rgba(208, 216, 243, 0.6);
     padding: 0.5rem;
     margin: 1rem 0;
@@ -11,45 +11,81 @@
 
 .expense-item__description {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
-    align-items: flex-end;
-    flex-flow: column-reverse;
+    align-items: center;
+    flex-flow: row nowrap;
     justify-content: flex-start;
-    flex: 1;
+    flex-grow: 1;
+}
+
+.expense-item__title {
+    font-size: 1.8rem;
+    flex-grow: 1;
+    color: var(--color-white-0);
+}
+
+.expense-item__title h3 {
+    align-self: center;
 }
 
 .expense-item h2 {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     flex: 1;
     margin: 0 1rem;
     color: var(--color-white-0);
 }
 
 .expense-item__price {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--color-white-0);
+    min-width: 20rem;
     background-color: var(--color-pink-0);
     border: 1px solid var(--color-white-0);
     padding: 0.5rem;
     border-radius: 12px;
+    align-self: stretch;
+    justify-self: center;
+    justify-self: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
 }
 
-@media (min-width: 580px) {
-    .expense-item__description {
-        flex-direction: row;
+.expense-item__price h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--color-white-0);
+}
+
+@media (max-width: 580px) {
+    .expense-item{
+        flex-flow: column nowrap;
         align-items: center;
-        justify-content: flex-start;
+        padding: 4rem 0;
+    }
+    .expense-item__description {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
         flex: 1;
+        margin: 1rem 1rem;
     }
 
     .expense-item__description h2 {
-        font-size: 1.25rem;
+        font-size: 1.8rem;
+        width: 100%;
+        text-align: center;
     }
 
     .expense-item__price {
-        font-size: 1.25rem;
-        padding: 0.5rem 1.5rem;
+        font-size: 1.8rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .expense-item__title {
+        line-height: 3;
+        flex-grow: 0;
     }
 }
