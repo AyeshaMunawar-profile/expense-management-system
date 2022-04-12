@@ -2,7 +2,6 @@ import React from 'react';
 import "./ExpenseTracker.css"
 import ExpenseItem from "../../Components/ExpenseItem/ExpenseItem";
 import Card from "../Card/Card";
-import AddExpense from "../../Components/AddExpense/AddExpense";
 
 function ExpenseTracker(props) {
     const expensesList = props.expenses;
@@ -19,7 +18,6 @@ function ExpenseTracker(props) {
             <Card className={"expenses-list"}>
                 {getExpenseListComponent()}
             </Card>
-            <AddExpense/>
         </div>
     );
 }

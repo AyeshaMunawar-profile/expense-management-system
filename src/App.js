@@ -1,6 +1,8 @@
 import './App.css';
 import Header from "./Container/Header/Header";
 import ExpenseTracker from "./Container/ExpenseTracker/ExpenseTracker";
+import AddExpense from "./Components/AddExpense/AddExpense";
+import React from "react";
 
 function App() {
     const expenses = [
@@ -33,6 +35,7 @@ function App() {
         <div className="App">
             <Header/>
             <ExpenseTracker expenses={expenses}/>
+            <AddExpense/>
         </div>
     );
 }
