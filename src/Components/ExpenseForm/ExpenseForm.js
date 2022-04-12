@@ -2,6 +2,8 @@ import React from 'react';
 import "./ExpenseForm.css"
 
 function ExpenseForm(props) {
+    const date = new Date();
+    const today = date.toISOString().split('T')[0]
     return (
         <div>
             <form>
@@ -18,7 +20,8 @@ function ExpenseForm(props) {
                     <div className="add-expense__control">
                         <label className="add-expense__label label" htmlFor="input-expense-date">
                             <h4 className="heading">Select Date</h4></label>
-                        <input type="date" name="input-expense-date" className="input add-expense__input" required/>
+                        <input type="date" name="input-expense-date" className="input add-expense__input"
+                               min={today} defaultValue={today} required/>
                     </div>
                     <div className="add-expense__control">
                         <label className="add-expense__label label"
