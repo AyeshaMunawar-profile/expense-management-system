@@ -3,13 +3,14 @@ It is a basic app created in react.js that allows you to add your expenses per m
 
 ## Technologies used 
 1) React.js
-2) CSS
+2) CSS (cascading style sheets)
 
 ##Features
 1) Add expenses by filling a form
 2) Display the list of all the expenses
 3) Allow user to search by expense name
 4) Allow user to see expenses for each year and month separately and show it in the form of progress bar 
+5) Allows user to add a new expense with title,amount and date 
 
 ## Things I learned 
 1) React basic and how to work with components
