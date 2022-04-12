@@ -1,6 +1,12 @@
-.expense-tracker{
-    padding: 20rem 1rem;
+.expense-tracker {
+    padding: 20rem 3rem;
 }
-.expense-tracker__heading{
+
+.expense-tracker__heading {
     margin-bottom: 8rem;
+}
+
+.expenses-list {
+    background-color: var(--color-green-0);
+    padding: 5rem 3rem;
 }

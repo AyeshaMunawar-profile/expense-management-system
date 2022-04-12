@@ -1,6 +1,8 @@
 import React from 'react';
 import "./ExpenseTracker.css"
 import ExpenseItem from "../../Components/ExpenseItem/ExpenseItem";
+import Card from "../Card/Card";
+import AddExpense from "../../Components/AddExpense/AddExpense";
 
 function ExpenseTracker(props) {
     const expensesList = props.expenses;
@@ -14,7 +16,10 @@ function ExpenseTracker(props) {
     return (
         <div id="expense-tracking-area" className="expense-tracker bg-white">
             <h1 className="expense-tracker__heading">Your Expenses</h1>
-            {getExpenseListComponent()}
+            <Card className={"expenses-list"}>
+                {getExpenseListComponent()}
+            </Card>
+            <AddExpense/>
         </div>
     );
 }
