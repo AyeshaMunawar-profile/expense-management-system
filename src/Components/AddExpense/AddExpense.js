@@ -5,11 +5,11 @@ import "./AddExpense.css"
 
 function AddExpense(props) {
     return (
-        <Card className="add-expense-area">
+        <div className="add-expense-area">
             <div className="add-expense">
                 <ExpenseForm/>
             </div>
-        </Card>
+        </div>
 
     );
 }
