@@ -24,12 +24,13 @@
     color: var(--color-white-0);
     border-radius: 12px;
     margin-right: 1rem;
+    transition: all 0.3s ease-in-out;
 }
 
 .add-expense button:hover,
 .add-expense button:active {
-    background-color: var(--color-green-0);
-    border-color: var(--color-green-0);
+    background-color: var(--color-blue-0);
+    border-color: var(--color-blue-0);
 }
 
 .add-expense button.alternative {
