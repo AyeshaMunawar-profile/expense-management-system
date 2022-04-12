@@ -11,6 +11,9 @@ It is a basic app created in react.js that allows you to add your expenses per m
 3) Allow user to search by expense name
 4) Allow user to see expenses for each year and month separately and show it in the form of progress bar 
 
+## Things I learned 
+1) React basic and how to work with components
+2) React state and working with events
 
 # Getting Started with Create React App
 
