@@ -2,9 +2,10 @@ import './App.css';
 import Header from "./Container/Header/Header";
 import ExpenseTracker from "./Container/ExpenseTracker/ExpenseTracker";
 import AddExpense from "./Components/AddExpense/AddExpense";
-import React from "react";
+import React, {useEffect, useState} from "react";
 
 function App() {
+    const [expensesList, setExpensesList] = useState([])
     const expenses = [
         {
             id: "expense-1",
@@ -27,18 +28,34 @@ function App() {
         {
             id: "expense-4",
             date: new Date(),
-            expenseTitle: "Insurance Fee",
+            expenseTitle: "Udemy Fee",
             amount: 253.474
         }
     ]
+    // add already existing expenses to the list
+    useEffect(() => {
+        setExpensesList(expenses)
+    }, [])
+
     const onSaveExpense = (data) => {
         const {date, expenseTitle, amount} = data;
+        // add the new expense to the latest list of expenses
+        setExpensesList((previousList) => {
+            return [
+                ...previousList,
+                {
+                    id: `expense-${previousList.length + 1}`,
+                    date, expenseTitle,
+                    amount
+                }
+            ]
+        })
         console.log("Data received successfully at the app component", data)
     }
     return (
         <div className="App">
             <Header/>
-            <ExpenseTracker expenses={expenses}/>
+            <ExpenseTracker expenses={expensesList}/>
             <AddExpense onSaveExpense={onSaveExpense}/>
         </div>
     );
