@@ -1,22 +1,33 @@
-import React from 'react';
-import "./ExpenseTracker.css"
+import React, { useState } from 'react';
 import ExpenseItem from "../../Components/ExpenseItem/ExpenseItem";
 import Card from "../Card/Card";
+import ExpensesFilter from '../../Components/ExpenseFilter/ExpenseFilter';
+import "./ExpenseTracker.css";
 
 function ExpenseTracker(props) {
-    const expensesList = props.expenses;
-    let expenseListComponent = []
-    const getExpenseListComponent = () => {
-        expensesList.forEach(expense => {
-            expenseListComponent.push(<ExpenseItem {...expense} key={expense.id}/>)
-        })
-        return expenseListComponent;
+    const totalExpensesList = props.expenses;
+    const [yearSelected, setYearSelected] = useState('all')
+    const [currentExpensesList, setCurrentExpensesList] = useState(totalExpensesList)
+    const onYearSearchChangeHandler = (year) => {
+        let expenses = []
+        setYearSelected(year)
+        if (year === "all") {
+            expenses = totalExpensesList;
+        } else {
+            expenses = totalExpensesList.filter(expense => expense.date.getFullYear().toString() === year)
+        }
+        setCurrentExpensesList(expenses);
     }
     return (
         <div id="expense-tracking-area" className="expense-tracker bg-white">
             <h1 className="expense-tracker__heading">Your Expenses</h1>
-            <Card className={"expenses-list"}>
-                {getExpenseListComponent()}
+            <Card className="expense-filter-area">
+                <ExpensesFilter onYearSearchChange={onYearSearchChangeHandler} yearSelected={yearSelected} />
+            </Card>
+            <Card className="expenses-list">
+                {currentExpensesList.map(expense => {
+                    return <ExpenseItem  {...expense} key={expense.id} />
+                })}
             </Card>
         </div>
     );
