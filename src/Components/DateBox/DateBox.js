@@ -2,8 +2,8 @@ import React from 'react';
 import "./DateBox.css"
 
 function DateBox({date}) {
-    const day = date.getDay().toLocaleString('en-US', {day: "2-digit"});
-    const month = date.toLocaleString('en-US', {month: 'short'});
+    const day = date.toLocaleString('en-US', {day: '2-digit'});
+    const month = date.toLocaleString('en-US', {month: 'long'});
     const year = date.getFullYear();
     return (
         <div className="expense-date">
