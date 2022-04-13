@@ -18,7 +18,11 @@ function ExpenseForm(props) {
             amount
         }
         console.log(`Form Values submitted successfully :`, formData)
+        setExpenseTitle("")
+        setAmount("0.00")
+        setDate(today)
     }
+
     return (
         <div>
             <form onSubmit={onSubmitForm}>
@@ -60,8 +64,9 @@ function ExpenseForm(props) {
                                name="Expense Amount"
                                className="input add-expense__input"
                                placeholder="Enter amount"
-                               min={1}
-                               max={100000000}
+                               min={1.00}
+                               max={100000000.00}
+                               step={0.01}
                                required/>
                     </div>
                     <div className="add-expense__control">
