@@ -31,11 +31,15 @@ function App() {
             amount: 253.474
         }
     ]
+    const onSaveExpense = (data) => {
+        const {date, expenseTitle, amount} = data;
+        console.log("Data received successfully at the app component", data)
+    }
     return (
         <div className="App">
             <Header/>
             <ExpenseTracker expenses={expenses}/>
-            <AddExpense/>
+            <AddExpense onSaveExpense={onSaveExpense}/>
         </div>
     );
 }

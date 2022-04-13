@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import "./ExpenseForm.css"
 
 function ExpenseForm(props) {
+    const {onSaveExpense} = props;
     const newDate = new Date();
     const today = newDate.toISOString().split('T')[0]
     const [date, setDate] = useState(today);
@@ -17,10 +18,10 @@ function ExpenseForm(props) {
             expenseTitle,
             amount
         }
-        console.log(`Form Values submitted successfully :`, formData)
         setExpenseTitle("")
         setAmount("0.00")
         setDate(today)
+        onSaveExpense(formData)
     }
 
     return (
