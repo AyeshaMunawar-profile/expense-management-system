@@ -1,25 +1,25 @@
 .expenses-filter {
-  color: var(--color-white-0);
-  padding: 0 1rem;
-  font-size: 1.8rem;
+    color: var(--color-white-0);
+    padding: 0 1rem;
+    font-size: 1.8rem;
 }
 
 .expenses-filter__control {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  margin: 1rem 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
 }
 
 .expenses-filter label {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
 }
 
 .expenses-filter select {
-  font-size: 1.4rem;
-  padding: 0.5rem 3rem;
-  font-weight: bold;
-  border-radius: 6px;
+    font-size: 1.4rem;
+    padding: 0.5rem 3rem;
+    font-weight: bold;
+    border-radius: 6px;
 }

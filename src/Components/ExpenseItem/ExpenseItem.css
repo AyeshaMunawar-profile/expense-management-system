@@ -6,9 +6,11 @@
     border-radius: 12px;
     background-color: var(--color-blue-0);
 }
-.expense-item:not(:last-of-type){
+
+.expense-item:not(:last-of-type) {
     margin: 0 0 5rem 0;
 }
+
 .expense-item__description {
     display: flex;
     flex-direction: row;
@@ -59,11 +61,12 @@
 }
 
 @media (max-width: 580px) {
-    .expense-item{
+    .expense-item {
         flex-flow: column nowrap;
         align-items: center;
         padding: 4rem 0;
     }
+
     .expense-item__description {
         flex-direction: column;
         flex-wrap: nowrap;
