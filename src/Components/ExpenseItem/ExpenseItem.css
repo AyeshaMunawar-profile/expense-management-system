@@ -60,6 +60,10 @@
     color: var(--color-white-0);
 }
 
+.expense-list__item{
+    margin-bottom: 3rem;
+}
+
 @media (max-width: 580px) {
     .expense-item {
         flex-flow: column nowrap;
@@ -92,3 +96,4 @@
         flex-grow: 0;
     }
 }
+
