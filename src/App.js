@@ -12,7 +12,7 @@ const DUMMY_EXPENSES = [
     },
     {
         id: "expense-2",
-        date: new Date("2021-11-13T18:07:57.243Z"),
+        date: new Date("2022-11-13T18:07:57.243Z"),
         expenseTitle: "University Fee",
         amount: 4431.22
     },
