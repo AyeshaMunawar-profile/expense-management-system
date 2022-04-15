@@ -10,7 +10,8 @@
     background-color: var(--color-green-0);
     padding: 5rem 3rem;
 }
-.expense-filter-area{
+
+.expense-filter-area {
     background-color: var(--color-blue-0);
     padding: 3rem 1rem;
     margin-bottom: 3rem;

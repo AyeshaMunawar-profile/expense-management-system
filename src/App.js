@@ -2,7 +2,7 @@ import './App.css';
 import Header from "./Container/Header/Header";
 import ExpenseTracker from "./Container/ExpenseTracker/ExpenseTracker";
 import AddExpense from "./Components/AddExpense/AddExpense";
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 
 function App() {
     const expenses = [
@@ -33,7 +33,7 @@ function App() {
     ]
     const [expensesList, setExpensesList] = useState(expenses)
     const onSaveExpenseHandler = (data) => {
-        const { date, expenseTitle, amount } = data;
+        const {date, expenseTitle, amount} = data;
         // add the new expense to the latest list of expenses
         setExpensesList((previousList) => {
             return [
@@ -49,9 +49,9 @@ function App() {
     }
     return (
         <div className="App">
-            <Header />
-            <ExpenseTracker expenses={expensesList} />
-            <AddExpense onSaveExpense={onSaveExpenseHandler} />
+            <Header/>
+            <ExpenseTracker expenses={expensesList}/>
+            <AddExpense onSaveExpense={onSaveExpenseHandler}/>
         </div>
     );
 }

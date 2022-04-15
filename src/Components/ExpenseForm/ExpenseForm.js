@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import "./ExpenseForm.css"
 
 function ExpenseForm(props) {
-    const { onSaveExpense } = props;
+    const {onSaveExpense} = props;
     const newDate = new Date();
     const today = newDate.toISOString().split('T')[0]
     const [date, setDate] = useState(today);
@@ -36,39 +36,39 @@ function ExpenseForm(props) {
                             <h4 className="heading"> Expense Name</h4>
                         </label>
                         <input value={expenseTitle}
-                            onChange={(event) => setExpenseTitle(event.target.value)}
-                            type="text"
-                            name="Expense Title"
-                            className="input add-expense__input"
-                            placeholder=" Enter expense Title"
-                            required />
+                               onChange={(event) => setExpenseTitle(event.target.value)}
+                               type="text"
+                               name="Expense Title"
+                               className="input add-expense__input"
+                               placeholder=" Enter expense Title"
+                               required/>
                     </div>
                     <div className="add-expense__control">
                         <label className="add-expense__label label" htmlFor="Expense Date">
                             <h4 className="heading">Select Date</h4></label>
                         <input onChange={(event) => setDate(event.target.value)}
-                            value={date}
-                            type="date"
-                            name="Expense Date"
-                            className="input add-expense__input"
-                            min={today}
-                            placeholder=" Select date"
-                            required />
+                               value={date}
+                               type="date"
+                               name="Expense Date"
+                               className="input add-expense__input"
+                               min={today}
+                               placeholder=" Select date"
+                               required/>
                     </div>
                     <div className="add-expense__control">
                         <label className="add-expense__label label"
-                            htmlFor="Expense Amount">
+                               htmlFor="Expense Amount">
                             <h4 className="heading">Amount</h4></label>
                         <input onChange={(event) => setAmount(event.target.value)}
-                            value={amount}
-                            type="number"
-                            name="Expense Amount"
-                            className="input add-expense__input"
-                            placeholder="Enter amount"
-                            min={1.00}
-                            max={100000000.00}
-                            step={0.01}
-                            required />
+                               value={amount}
+                               type="number"
+                               name="Expense Amount"
+                               className="input add-expense__input"
+                               placeholder="Enter amount"
+                               min={1.00}
+                               max={100000000.00}
+                               step={0.01}
+                               required/>
                     </div>
                     <div className="add-expense__control">
                         <button

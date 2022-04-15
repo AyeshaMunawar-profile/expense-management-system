@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import ExpenseItem from "../../Components/ExpenseItem/ExpenseItem";
 import Card from "../Card/Card";
 import ExpensesFilter from '../../Components/ExpenseFilter/ExpenseFilter';
@@ -22,11 +22,11 @@ function ExpenseTracker(props) {
         <div id="expense-tracking-area" className="expense-tracker bg-white">
             <h1 className="expense-tracker__heading">Your Expenses</h1>
             <Card className="expense-filter-area">
-                <ExpensesFilter onYearSearchChange={onYearSearchChangeHandler} yearSelected={yearSelected} />
+                <ExpensesFilter onYearSearchChange={onYearSearchChangeHandler} yearSelected={yearSelected}/>
             </Card>
             <Card className="expenses-list">
                 {currentExpensesList.map(expense => {
-                    return <ExpenseItem  {...expense} key={expense.id} />
+                    return <ExpenseItem  {...expense} key={expense.id}/>
                 })}
             </Card>
         </div>
