@@ -2,7 +2,7 @@ import './App.css';
 import Header from "./Container/Header/Header";
 import ExpenseTracker from "./Container/ExpenseTracker/ExpenseTracker";
 import AddExpense from "./Components/AddExpense/AddExpense";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 const DUMMY_EXPENSES = [
     {
         id: "expense-1",
