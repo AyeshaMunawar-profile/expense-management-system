@@ -7,9 +7,12 @@ import "./ExpenseTracker.css";
 function ExpenseTracker(props) {
     const totalExpensesList = props.expenses;
     const [yearSelected, setYearSelected] = useState('all');
+    let filteredExpenses = totalExpensesList;
     const onYearSearchChangeHandler = (year) => {
-        setYearSelected(year)
+        setYearSelected(year);
     }
+
+    filteredExpenses = yearSelected === "all" ? totalExpensesList : totalExpensesList.filter(expense => expense.date.getFullYear().toString() === yearSelected)
 
     return (
         <div id="expense-tracking-area" className="expense-tracker bg-white">
@@ -18,7 +21,7 @@ function ExpenseTracker(props) {
                 <ExpensesFilter onYearSearchChange={onYearSearchChangeHandler} yearSelected={yearSelected} />
             </Card>
             <Card className="expenses-list">
-                <ExpensesList totalExpensesList={totalExpensesList} year={yearSelected} />
+                <ExpensesList expensesList={filteredExpenses} />
             </Card>
         </div>
     );

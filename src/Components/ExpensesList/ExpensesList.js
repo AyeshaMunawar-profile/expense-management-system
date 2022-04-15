@@ -1,12 +1,15 @@
 import ExpenseItem from "../ExpenseItem/ExpenseItem"
-const ExpensesList = ({ totalExpensesList, year }) => {
-	const filteredExpenses = year === "all" ? totalExpensesList : totalExpensesList.filter(expense => expense.date.getFullYear().toString() === year)
-	if (filteredExpenses.length > 0) {
-		return filteredExpenses.map(expense => {
+const ExpensesList = ({ expensesList }) => {
+	let expensesContent = <h3 className='heading expenses-list__fallback'> No expenses found for this year !</h3>;
+	if (expensesList.length > 0) {
+		expensesContent = expensesList.map(expense => {
 			return <ExpenseItem  {...expense} key={expense.id} />
 		})
-	} else {
-		return <h3 className='heading'> No expenses found for this year !</h3>
 	}
+	return (
+		<ul className="expenses-list">
+			{expensesContent}
+		</ul>
+	)
 }
 export default ExpensesList;
