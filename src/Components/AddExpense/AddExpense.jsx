@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import ExpenseForm from "../ExpenseForm/ExpenseForm";
+import AddExpenseForm from "./AddExpenseForm/AddExpenseForm";
 import "./AddExpense.css"
 import SecondaryButton from "../Button/SecondaryButton";
 
@@ -14,7 +14,7 @@ function AddExpense(props) {
     }
     const getAddExpenseContent = () => {
         return isAddExpenseVisible ?
-            <ExpenseForm onSaveExpense={onSaveExpense} onCancelEditingExpense={onCancelEditingExpense}/> :
+            <AddExpenseForm onSaveExpense={onSaveExpense} onCancelEditingExpense={onCancelEditingExpense}/> :
             <SecondaryButton type="button" text="Add a new Expense" onClickHandler={addNewExpenseClicked}/>
     }
     return (

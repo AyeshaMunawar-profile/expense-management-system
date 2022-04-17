@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import "./ExpenseForm.css"
-import SecondaryButton from "../Button/SecondaryButton";
+import "./AddExpenseForm.css"
+import SecondaryButton from "../../Button/SecondaryButton";
 
-function ExpenseForm(props) {
+function AddExpenseForm(props) {
     const {onSaveExpense, onCancelEditingExpense} = props;
     const newDate = new Date();
     const today = newDate.toISOString().split('T')[0]
@@ -82,4 +82,4 @@ function ExpenseForm(props) {
     );
 }
 
-export default ExpenseForm;
+export default AddExpenseForm;

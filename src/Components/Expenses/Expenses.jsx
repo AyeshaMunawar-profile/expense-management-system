@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Card from "../Card/Card";
-import ExpensesFilter from '../../Components/ExpenseFilter/ExpenseFilter';
-import ExpensesList from "../../Components/ExpensesList/ExpensesList"
-import "./ExpenseTracker.css";
+import Card from "../../Container/Card/Card";
+import ExpensesFilter from './ExpenseFilter/ExpenseFilter';
+import ExpensesList from "./ExpensesList/ExpensesList"
+import "./Expenses.css";
 
-function ExpenseTracker(props) {
+function Expenses(props) {
     const totalExpensesList = props.expenses;
     const [yearSelected, setYearSelected] = useState('all');
     let filteredExpenses = totalExpensesList;
@@ -27,4 +27,4 @@ function ExpenseTracker(props) {
     );
 }
 
-export default ExpenseTracker;
+export default Expenses;
