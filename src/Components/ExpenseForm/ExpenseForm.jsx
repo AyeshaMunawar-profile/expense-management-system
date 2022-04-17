@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import "./ExpenseForm.css"
+import SecondaryButton from "../Button/SecondaryButton";
 
 function ExpenseForm(props) {
-    const {onSaveExpense} = props;
+    const {onSaveExpense, onCancelAddExpense} = props;
     const newDate = new Date();
     const today = newDate.toISOString().split('T')[0]
     const [date, setDate] = useState(today);
@@ -25,7 +26,7 @@ function ExpenseForm(props) {
     }
 
     return (
-        <div>
+        <div className="add-expense-form">
             <form onSubmit={onSubmitForm}>
                 <div className="add-expense__controls">
                     <h2 className="add-expense__title heading">
@@ -71,10 +72,8 @@ function ExpenseForm(props) {
                                required/>
                     </div>
                     <div className="add-expense__control">
-                        <button
-                            type="submit">
-                            <h4 className="paragraph">Add Expense</h4>
-                        </button>
+                        <SecondaryButton type="reset" text="Cancel" onClickHandler={onCancelAddExpense}/>
+                        <SecondaryButton type="submit" text="Add Expense"/>
                     </div>
                 </div>
             </form>
