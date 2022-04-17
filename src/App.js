@@ -1,6 +1,6 @@
 import './App.css';
 import Header from "./Container/Header/Header";
-import ExpenseTracker from "./Container/ExpenseTracker/ExpenseTracker";
+import Expenses from "./Components/Expenses/Expenses";
 import AddExpense from "./Components/AddExpense/AddExpense";
 import React, { useState } from "react";
 const DUMMY_EXPENSES = [
@@ -50,7 +50,7 @@ function App() {
     return (
         <div className="App">
             <Header />
-            <ExpenseTracker expenses={expensesList} />
+            <Expenses expenses={expensesList} />
             <AddExpense onSaveExpense={onSaveExpenseHandler} />
         </div>
     );
