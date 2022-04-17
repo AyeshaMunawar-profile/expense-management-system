@@ -23,6 +23,7 @@ function AddExpense(props) {
                 {getAddExpenseContent()}
             </div>
         </div>
+    )
 }
 
 export default AddExpense;
