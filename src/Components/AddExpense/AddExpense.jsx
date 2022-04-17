@@ -9,21 +9,20 @@ function AddExpense(props) {
     const addNewExpenseClicked = () => {
         setIsAddExpenseVisible(true)
     }
-    const onCancelAddExpense = () => {
+    const onCancelEditingExpense = () => {
         setIsAddExpenseVisible(false)
     }
     const getAddExpenseContent = () => {
         return isAddExpenseVisible ?
-            <ExpenseForm onSaveExpense={onSaveExpense} onCancelAddExpense={onCancelAddExpense}/> :
+            <ExpenseForm onSaveExpense={onSaveExpense} onCancelEditingExpense={onCancelEditingExpense}/> :
             <SecondaryButton type="button" text="Add a new Expense" onClickHandler={addNewExpenseClicked}/>
     }
     return (
         <div className="add-expense-area">
-            <div className={`add-expense ${isAddExpenseVisible?'column-align-start':'column-align-center'}`}>
+            <div className={`add-expense ${isAddExpenseVisible ? 'column-align-start' : 'column-align-center'}`}>
                 {getAddExpenseContent()}
+            </div>
         </div>
-</div>
-)
 }
 
 export default AddExpense;

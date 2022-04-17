@@ -3,7 +3,7 @@ import "./ExpenseForm.css"
 import SecondaryButton from "../Button/SecondaryButton";
 
 function ExpenseForm(props) {
-    const {onSaveExpense, onCancelAddExpense} = props;
+    const {onSaveExpense, onCancelEditingExpense} = props;
     const newDate = new Date();
     const today = newDate.toISOString().split('T')[0]
     const [date, setDate] = useState(today);
@@ -23,6 +23,7 @@ function ExpenseForm(props) {
         setAmount("0.00")
         setDate(today)
         onSaveExpense(formData)
+        onCancelEditingExpense()
     }
 
     return (
@@ -72,7 +73,7 @@ function ExpenseForm(props) {
                                required/>
                     </div>
                     <div className="add-expense__control">
-                        <SecondaryButton type="reset" text="Cancel" onClickHandler={onCancelAddExpense}/>
+                        <SecondaryButton type="reset" text="Cancel" onClickHandler={onCancelEditingExpense}/>
                         <SecondaryButton type="submit" text="Add Expense"/>
                     </div>
                 </div>
