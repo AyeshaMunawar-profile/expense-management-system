@@ -17,6 +17,6 @@
     margin-bottom: 3rem;
 }
 
-.expense-chart-area {
-    margin-bottom: 3rem;
+.expense-chart-area, .expenses-chart {
+    margin-bottom: 4rem;
 }

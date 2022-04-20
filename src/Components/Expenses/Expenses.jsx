@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import Card from "../../Container/Card/Card";
 import ExpensesFilter from './ExpenseFilter/ExpenseFilter';
 import ExpensesList from "./ExpensesList/ExpensesList"
 import "./Expenses.css";
-import Chart from "../Chart/Chart";
+import ExpensesChart from "./ExpensesChart/ExpensesChart";
 
 function Expenses(props) {
     const totalExpensesList = props.expenses;
@@ -19,13 +19,13 @@ function Expenses(props) {
         <div id="expense-tracking-area" className="expense-tracker bg-white">
             <h1 className="expense-tracker__heading">Your Expenses</h1>
             <Card className="expense-filter-area">
-                <ExpensesFilter onYearSearchChange={onYearSearchChangeHandler} yearSelected={yearSelected} />
+                <ExpensesFilter onYearSearchChange={onYearSearchChangeHandler} yearSelected={yearSelected}/>
             </Card>
-            <Card className="expense-chart-area">
-                <Chart />
+            <Card className="expenses-chart">
+                <ExpensesChart expensesList={filteredExpenses}/>
             </Card>
             <Card className="expenses-list">
-                <ExpensesList expensesList={filteredExpenses} />
+                <ExpensesList expensesList={filteredExpenses}/>
             </Card>
         </div>
     );
