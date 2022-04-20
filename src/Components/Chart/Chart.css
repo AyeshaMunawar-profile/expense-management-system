@@ -1,9 +1,17 @@
 .chart {
-    padding: 1rem;
+    padding: 5rem 1rem;
     border-radius: 12px;
     background-color: var(--color-yellow-0);
     text-align: center;
     display: flex;
     justify-content: space-around;
-    height: 10rem;
+}
+
+@media only screen and (max-width: 900px) {
+    .chart{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 }
