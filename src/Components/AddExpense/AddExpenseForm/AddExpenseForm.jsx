@@ -17,7 +17,7 @@ function AddExpenseForm(props) {
         const formData = {
             date: newDate,
             expenseTitle,
-            amount
+            amount: +amount
         }
         setExpenseTitle("")
         setAmount("0.00")
