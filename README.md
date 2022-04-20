@@ -19,9 +19,9 @@ It is a basic app created in react.js that allows you to add your expenses per m
 
    <img src="/demo/add-expense.png" width="1890" height="766" alt="Expense Management System Demo"/>
 
- <img src="/demo/add-expense-form.png" width="1848" height="761" alt="Expense Management System Demo"/>
+   <img src="/demo/add-expense-form.png" width="1848" height="761" alt="Expense Management System Demo"/>
 
-   <img src="/demo/add-expense-date-picker.png" width="1835" height="757" alt="Expense Management System Demo"/>
+   <img src="/demo/add-expense-date-picker.png"      width="1835" height="757" alt="Expense Management System Demo"/>
 
 3) Display the list of all the expenses
 
