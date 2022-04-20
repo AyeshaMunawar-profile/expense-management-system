@@ -1,7 +1,7 @@
 #Expense Management System
 It is a basic app created in react.js that allows you to add your expenses per month and visualize it though user-friendly graphs
 ## DEMO
-<img src="/demo/EMS-demo-gif.gif" width="40" height="40" alt="Expense Management System Demo"/>
+<img src="/demo/EMS-demo-gif.gif" width="1200" height="600" alt="Expense Management System Demo"/>
 
 ## Technologies used 
 1) React.js
@@ -13,24 +13,24 @@ It is a basic app created in react.js that allows you to add your expenses per m
 ##Features
 1) Responsive Header
 
-   <img src="/demo/header.png" width="1894" height="898" alt="Expense Management System Demo"/>
+   <img src="/demo/header.png" width="1200" height="600" alt="Expense Management System Demo"/>
    
 2) Add expenses by filling a form
 
-   <img src="/demo/add-expense.png" width="1890" height="766" alt="Expense Management System Demo"/>
+   <img src="/demo/add-expense.png" width="1200" height="600" alt="Expense Management System Demo"/>
 
-   <img src="/demo/add-expense-form.png" width="1848" height="761" alt="Expense Management System Demo"/>
+   <img src="/demo/add-expense-form.png" width="1200" height="600" alt="Expense Management System Demo"/>
 
-   <img src="/demo/add-expense-date-picker.png"      width="1835" height="757" alt="Expense Management System Demo"/>
+   <img src="/demo/add-expense-date-picker.png"      width="1200" height="600" alt="Expense Management System Demo"/>
 
 3) Display the list of all the expenses
 
-   <img src="/demo/expenses.png" width="1887" height="871" alt="Expense Management System Demo"/>
+   <img src="/demo/expenses.png" width="1200" height="600" alt="Expense Management System Demo"/>
    
 4) Allow user to search by expense name
 5) Allow user to see expenses for each year and month separately and show it in the form of bar chart
 
-   <img src="/demo/chart.png" width="1887" height="857" alt="Expense Management System Demo"/>
+   <img src="/demo/chart.png" width="1200" height="600" alt="Expense Management System Demo"/>
    
 6) Allows user to add a new expense with title,amount and date 
 
